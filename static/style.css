@@ -1,0 +1,56 @@
+/* style.css */
+
+/** {
+    border: 1px solid white;
+}*/
+:root {
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(34, 31, 31);
+    color: white;
+}
+
+input {
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    font-size: 0.75rem;
+}
+
+form#bostonForm {
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+    border: 2px solid white;
+}
+
+.item {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.25rem;
+}
+
+.item > label {
+    flex: 1 1 30%;
+}
+
+.item > input {
+    flex: 1 1 50%;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #325cac;
+    font-size: 1rem;
+    color: white;
+}

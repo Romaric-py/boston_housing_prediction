@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boston House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+
+<body>
+    <h1>Boston House Price Prediction</h1>
+    <form id="bostonForm" method="POST" action="/predict">
+
+        {% for name, description in variables %}
+
+        <div class='item'>
+            <label for="{{ name }}"> {{ name.upper() }}:</label>
+            <input type="number" id="{{ name }}" name="{{ name }}" step=0.01 required>
+
+            <div title="{{ description }}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #ffffff ;transform: ;msFilter:;" ><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
+            </div>
+        </div>
+
+        {% endfor %}
+
+        <button type="submit">Predict Price</button>
+    </form>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
